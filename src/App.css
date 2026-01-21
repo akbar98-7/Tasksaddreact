@@ -1,15 +1,15 @@
-/* ===== Kanban Board Container ===== */
+
 .kanban-container {
   padding: 20px;
 }
 
-/* ===== Row (Holds Columns) ===== */
+
 .kanban-row {
   display: flex;
   gap: 16px;
 }
 
-/* ===== Column ===== */
+
 .kanban-column {
   flex: 1;
   background-color: #f4f5f7;
@@ -18,14 +18,14 @@
   min-height: 400px;
 }
 
-/* ===== Column Title ===== */
+
 .kanban-column-title {
   margin-bottom: 12px;
   font-size: 18px;
   font-weight: 600;
 }
 
-/* ===== Card ===== */
+
 .kanban-card {
   background-color: #ffffff;
   padding: 10px;
@@ -36,7 +36,7 @@
   transition: transform 0.2s ease;
 }
 
-/* ===== Card Hover ===== */
+
 .kanban-card:hover {
   transform: translateY(-2px);
 }

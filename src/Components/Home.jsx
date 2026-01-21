@@ -15,7 +15,7 @@ const Home = () => {
       title: "Tasks",
       items: [
         { id: 1, name: "Design Login Page" },
-        { id: 2, name: "Create Wireframes" }
+        { id: 2, name: "Create Wireframes"  }
       ]
     },
     {
@@ -32,7 +32,11 @@ const Home = () => {
       id: 3,
       title: "Completed",
       items: [
-        { id: 4, name: "Project Setup" }
+        { id: 4, name: "Project Setup" 
+        },
+        { id: 5, name: "Deployment"
+        }
+
       ]
     }
   ];
