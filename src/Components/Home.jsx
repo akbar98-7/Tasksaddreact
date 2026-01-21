@@ -5,7 +5,7 @@ import "../App.css";
 const Card = ({ title }) => {
   return <div className="kanban-card">{title}</div>;
 };
- 
+
 
 const Home = () => {
 
@@ -15,16 +15,29 @@ const Home = () => {
       title: "Tasks",
       items: [
         { id: 1, name: "Design Login Page" },
-        { id: 2, name: "Create Wireframes"  }
+        { id: 2, name: "Create Wireframes" },
+        { id: 3, name: "API Integration" },
+        { id: 4, name: "Database Setup" },
+        { id: 5, name: "Project Setup" },
+        { id: 6, name: "Deployment" }
+
       ]
     },
     {
       id: 2,
       title: "In Process",
       items: [
-        { id: 3, name: "API Integration"
+        {
+          id: 3, name: "API Integration"
         },
-        { id: 4, name: "Database Setup"
+        {
+          id: 4, name: "Database Setup"
+        },
+         {
+          id: 5, name: "Project Setup"
+         },
+         {
+          id: 6, name: "Deployment"
          }
       ]
     },
@@ -32,9 +45,11 @@ const Home = () => {
       id: 3,
       title: "Completed",
       items: [
-        { id: 4, name: "Project Setup" 
+        {
+          id: 4, name: "Project Setup"
         },
-        { id: 5, name: "Deployment"
+        {
+          id: 5, name: "Deployment"
         }
 
       ]
