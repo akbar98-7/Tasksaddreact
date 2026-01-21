@@ -14,16 +14,16 @@ function App() {
     <>
 
       <div>
-      
+
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
-         
+
           <div className="container-fluid ">
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
             <div className="collapse navbar-collapse justify-content-center mt-5 gap-5" id="navbarNav">
-               <img src={web} alt="" width={150}  />
+              <img src={web} alt="" width={150} />
               <ul className="navbar-nav gap-5">
                 <Link to="/">
                   <li className="nav-item">
