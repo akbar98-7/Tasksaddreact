@@ -8,13 +8,11 @@ const Card = ({ title }) => (
 
 const Home = ({ data, onDelete }) => {
 
-
-
-
   return (
 
     <>
       <div className="d-flex gap-3 p-4">
+        <h1 className="mt-4 px-2">Delete Tasks</h1>
         {data.map((col) => (
           <div key={col.id} className="card p-2" style={{ width: "300px" }}>
             <h4>{col.title}</h4>

@@ -10,7 +10,7 @@ const AddTask = ({ data, setData }) => {
   const navigate = useNavigate();
 
   // 2. A clear function to handle what happens when the button is clicked
-  const handleAddClick = (e) => { 
+  const handleAddClick = (e) => {
     e.preventDefault(); // Stop the page from refreshing
 
     // Validation: Don't add empty tasks
@@ -38,7 +38,7 @@ const AddTask = ({ data, setData }) => {
     <div className="container mt-5">
       <div className="card p-4">
         <h3>Create New Task</h3>
- 
+
         <form onSubmit={handleAddClick}>
           {/* INPUT FIELD */}
           <div className="mb-3">
