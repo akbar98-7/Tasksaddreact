@@ -9,17 +9,31 @@ import web from './assets/web.jpg'
 
 function App() {
 
+// 5. Create a function to delete a task
+  const deleteTask = (columnId, taskId) => {
+  // 1. Create a copy of the data
+  const updatedData = kanbanData.map((col) => {
+    // 2. Find the column where the task lives
+    if (col.id === columnId) {
+      return {
+        ...col,
+        // 3. Keep every task EXCEPT the one we want to delete
+        items: col.items.filter((item) => item.id !== taskId),
+      };
+    }
+    return col;
+  });
+
+  // 4. Update the state
+  setKanbanData(updatedData);
+};
 
   const [kanbanData, setKanbanData] = useState([
     { id: 1, title: "To Do", items: [{ id: 1, name: "Design Login Page" }] },
-    { id: 2, title: "Intiation", items: [{ id: 3, name: "API Integration" }] },
-    { id: 3, title: "Planning", items: [] },
-    { id: 4, title: "Executuion", items: [] },
-    { id: 5, title: "Monitor", items: [] },
-    { id: 6, title: "Closure", items: [] },
-    { id: 7, title: "Done", items: [] }
+    { id: 2, title: "In Process", items: [{ id: 3, name: "API Integration" }] },
+    { id: 3, title: "Completed", items: [] }
+    
   ]);
-
 
   return (
     <>
@@ -30,7 +44,7 @@ function App() {
 
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
-            </button>
+            </button> 
 
             <div className="collapse navbar-collapse justify-content-center mt-5 gap-5" id="navbarNav">
               <img src={web} alt="" width={150} />
@@ -49,7 +63,7 @@ function App() {
 
         <Routes>
 
-          <Route path="/" element={<Home data={kanbanData} />} />
+          <Route path="/" element={<Home data={kanbanData} onDelete={deleteTask} />} />
           <Route path="/addtask" element={<AddTask data={kanbanData} setData={setKanbanData} />} />
 
         </Routes>
